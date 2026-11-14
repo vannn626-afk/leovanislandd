@@ -77,3 +77,10 @@ jobs:
           path: app/build/outputs/apk/debug/LEOVNISLAND-v1.0.0-debug.apk
           if-no-files-found: error
           retention-days: 30
+
+      - name: Publish APK to GitHub Releases (on tag push)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: app/build/outputs/apk/debug/LEOVNISLAND-v1.0.0-debug.apk
+          generate_release_notes: true
