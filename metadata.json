@@ -1,0 +1,6 @@
+{
+  "name": "LEOVNISLAND",
+  "description": "Dynamic Island replacement for Android featuring real MediaSession integration, Smart Notification Listener, Live Activities, Priority Queue, and Liquid Glass Customization Studio by LEOVAN.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

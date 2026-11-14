@@ -1,0 +1,33 @@
+package com.example.domain.model
+
+data class IslandConfiguration(
+    val isIslandEnabled: Boolean = true,
+    val isIslandVisible: Boolean = true,
+    val themeStyle: IslandThemeStyle = IslandThemeStyle.LIQUID_GLASS,
+    val compactWidthDp: Float = 136f,
+    val compactHeightDp: Float = 36f,
+    val expandedWidthDp: Float = 356f,
+    val expandedHeightDp: Float = 192f,
+    val minimalSizeScale: Float = 1.0f,
+    val compactSizeScale: Float = 1.0f,
+    val expandedSizeScale: Float = 1.0f,
+    val horizontalOffsetDp: Float = 0f,
+    val verticalOffsetDp: Float = 8f,
+    val cornerRadiusDp: Float = 28f,
+    val transparencyAlpha: Float = 0.94f,
+    val blurIntensity: Float = 0.65f,
+    val borderIntensity: Float = 0.45f,
+    val customAccentHex: Long = 0xFF38BDF8,
+    val animationSpeedMultiplier: Float = 1.0f,
+    val animationPreset: AnimationPreset = AnimationPreset.FLUID_SPRING,
+    val autoCollapseSeconds: Int = 5,
+    val isDraggable: Boolean = true,
+    val cutoutMode: CutoutAdaptationMode = CutoutAdaptationMode.AUTO_DETECT,
+    val doubleTapAction: DoubleTapAction = DoubleTapAction.PLAY_PAUSE_MEDIA,
+    val customNotificationSound: Boolean = false,
+    val respectDoNotDisturb: Boolean = true,
+    val hideInFullscreenLandscape: Boolean = false,
+    val batteryFriendlyMode: Boolean = false,
+    val autoStartOnBoot: Boolean = true,
+    val enabledAppCategories: Set<String> = SupportedAppCategory.entries.map { it.name }.toSet()
+)
