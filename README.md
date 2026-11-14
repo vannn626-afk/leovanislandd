@@ -101,12 +101,14 @@ app/src/main/java/com/example/
    ```
 
 ### Building APK Automatically on GitHub (GitHub Actions)
-This project includes a ready-to-use GitHub Actions workflow at `.github/workflows/build-apk.yml`:
-1. Click the **GitHub / Export** icon in AI Studio to push this project to your GitHub repository.
-2. Open your repository on **GitHub** and click the **Actions** tab.
-3. The **Build LEOVNISLAND Android APK** workflow runs automatically on every push (or you can trigger it manually via **Run workflow**).
-4. Once the workflow finishes, scroll down to the **Artifacts** section of the workflow run and download **`LEOVNISLAND-debug-apk`** (`LEOVNISLAND-v1.0.0-debug.apk`).
-5. *(Optional)* Pushing a version tag (e.g., `git tag v1.0.0 && git push origin v1.0.0`) automatically publishes a GitHub Release with `LEOVNISLAND-v1.0.0-debug.apk` attached.
+> **Why `github-actions-build-apk.yml` is in the project root:** GitHub blocks third-party OAuth apps from directly pushing files inside `.github/workflows/` unless the token has the restricted `workflow` scope (which causes `"Failed to push commit to GitHub"`).
+
+1. Push this project to GitHub using AI Studio's **Push to GitHub** button (it will now succeed cleanly).
+2. In your GitHub repository web interface, open `github-actions-build-apk.yml`, click **Edit (pencil icon)**, and rename the file path to:
+   ```text
+   .github/workflows/build-apk.yml
+   ```
+3. Commit the rename on GitHub, then open the **Actions** tab to download **`LEOVNISLAND-debug-apk`** (`LEOVNISLAND-v1.0.0-debug.apk`).
 
 ### First-Run Device Permissions Setup
 1. Open **LEOVNISLAND** and navigate to the **System** tab.
